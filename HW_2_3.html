@@ -1,0 +1,45 @@
+<!--Написать функцию, которая принимает на вход слово. Задача функции
+     посчитать и вывести в консоль, сколько в слове гласных, и сколько
+      согласных букв. например, функция getWordStructure(word)--> 
+
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+  <title>Пример веб-страницы</title>
+</head>
+<body>
+<!-- Сценарий -->
+<script>
+    let Vowelletters = ['а','о','у','ы','э','я','ё','ю','е','и','А','О','У','Э','Я','Ё','Ю','Е','И']; //массив гласых
+    let Consonantletters = ['б','Б','в','В','г','Г','д','Д','ж','Ж','з','З','й','Й','к','К','л','Л','н','Н','п','П','р','Р','с','С','т','Т','ф','Ф','х','Х','ц','Ц','ч','Ч','ш','Ш','щ','Щ'];// массив согласных
+   
+    var word = prompt("Введите слово ", "самовар ");    //Ввод слова
+    alert(" Вы ввели:  "+ word);
+     
+     let Vowell = 0;                       // счетчик гласных
+     let Consonant = 0;                    // cчетчик согласных  
+   function getWordStructure(word){
+        for (let i=0; i<word.length; i++){                       // цикл для проверки каждой буквы слова
+            for (let j=0;j<Vowelletters.length; j++){            // цикл для сравнения с гласными  
+                   if (word[i] == Vowelletters[j]) {
+                    Vowell++;
+                   }  }
+                   
+            for (let k=0; k<Consonantletters.length;k++){         // цикл для сравнения с согласными
+                if (word[i] == Consonantletters[k]) {
+                    Consonant++;
+                }
+                } }      
+            
+            alert("В данном слове " + Vowell +" гласных.");
+            alert("В данном слове  " + Consonant +" согласных.");
+   }
+   getWordStructure(word);
+</script>
+
+
+<!-- Конец сценария -->
+</body></html>
+
+
+
